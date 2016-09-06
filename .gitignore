@@ -1,0 +1,10 @@
+node_modules
+typings
+built
+app/jspm_packages
+app/**/*.js
+app/**/*.js.map
+!app/testing/e2e/**/*.js
+npm-debug.log
+debug.log
+target

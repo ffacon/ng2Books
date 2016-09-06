@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "baseUrl":".",
+        "paths": {
+            "@angular/common":["app/jspm_packages/npm/@angular/common@2.0.0-rc.1/index"],
+            "@angular/common/*":["app/jspm_packages/npm/@angular/common@2.0.0-rc.1/*"],
+            "@angular/compiler":["app/jspm_packages/npm/@angular/compiler@2.0.0-rc.1/index"],
+            "@angular/core":["app/jspm_packages/npm/@angular/core@2.0.0-rc.1/index"],
+            "@angular/core/*":["app/jspm_packages/npm/@angular/core@2.0.0-rc.1/*"],
+            "@angular/http":["app/jspm_packages/npm/@angular/http@2.0.0-rc.1/index"],
+            "@angular/http/*":["app/jspm_packages/npm/@angular/http@2.0.0-rc.1/*"],
+            "@angular/platform-browser-dynamic":["app/jspm_packages/npm/@angular/platform-browser-dynamic@2.0.0-rc.1/index"],
+            "@angular/platform-browser-dynamic/*":["app/jspm_packages/npm/@angular/platform-browser-dynamic@2.0.0-rc.1/*"],
+            "@angular/platform-browser":["app/jspm_packages/npm/@angular/platform-browser@2.0.0-rc.1/index"],
+            "@angular/platform-browser/*":["app/jspm_packages/npm/@angular/platform-browser@2.0.0-rc.1/*"],
+            "@angular/router-deprecated":["app/jspm_packages/npm/@angular/router-deprecated@2.0.0-rc.1/index"],
+            "@angular/router-deprecated/*":["app/jspm_packages/npm/@angular/router-deprecated@2.0.0-rc.1/*"],
+            "@angular/router":["app/jspm_packages/npm/@angular/router@2.0.0-rc.1/index"],
+            "@angular/router/*":["app/jspm_packages/npm/@angular/router@2.0.0-rc.1/*"],
+            "@angular/upgrade":["app/jspm_packages/npm/@angular/upgrade@2.0.0-rc.1/index"],
+            "@angular/upgrade/*":["app/jspm_packages/npm/@angular/upgrade@2.0.0-rc.1/*"],
+            "rxjs/*":["app/jspm_packages/npm/rxjs@5.0.0-beta.6/*"]
+        },
+       "target": "es5",
+        "module": "system",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "preserveConstEnums": true,
+        "noImplicitAny": true,
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules", "app/jspm_packages", "typings"
+    ]
+}
