@@ -1,20 +1,16 @@
 {
   "name": "ecommerce",
   "version": "1.0.1",
-  "author": {
-    "name": "Legrand Régis",
-    "email": "regis.legrand@worldline.com"
-  },
   "scripts": {
     "serve": "gulp express --gulpfile more/gulp/gulpfile.js --cwd .",
     "compile": "gulp compileTs --gulpfile more/gulp/gulpfile.js --cwd .",
     "dev": "gulp dev --gulpfile more/gulp/gulpfile.js --cwd .",
     "dist": "gulp dist --gulpfile more/gulp/gulpfile.js --cwd .",
     "jspm": "jspm install",
-    "karma":"gulp karma --gulpfile more/gulp/gulpfile.js --cwd .",
-    "karmadebug":"karma start more/conf/karma.conf.js",
+    "karma": "gulp karma --gulpfile more/gulp/gulpfile.js --cwd .",
+    "karmadebug": "karma start more/conf/karma.conf.js",
     "protractorserver": "gulp webdriver_standalone --gulpfile more/gulp/gulpfile.js --cwd .",
-    "protractor": "gulp test-e2e --gulpfile more/gulp/gulpfile.js --cwd ."    
+    "protractor": "gulp test-e2e --gulpfile more/gulp/gulpfile.js --cwd ."
   },
   "dependencies": {
     "reflect-metadata": "0.1.2",
