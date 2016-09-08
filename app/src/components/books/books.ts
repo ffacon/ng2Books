@@ -31,5 +31,7 @@ export class Books implements OnInit{
 		this.currentPage = page;
 	}
 
+	getRatingClass = this.booksService.getRatingClass;
+
 
 }

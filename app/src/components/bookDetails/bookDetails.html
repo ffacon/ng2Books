@@ -9,9 +9,7 @@
         <div class="photo-data">
             <p>
                 <a href="#">
-                    <!-- TODO_MORE : use getImagePath here:
-                    <img class="u-photo" alt="Title of product" />
-                    -->
+                    <img class="u-photo" [src]="getImagePath()" alt="Title of product" />
                 </a>
             </p>
         </div>
@@ -20,11 +18,10 @@
             <p class="rating"> 
 
                 <data class="p-rating">
-                    <!-- TODO_MORE : use getStarsImagePath here
                     <img 
+                        [src]="getStarsImagePath()" 
                         alt="Three stars" 
                     />
-                    -->
                 </data>
             </p>
 
@@ -49,24 +46,19 @@
 
     <div class="k-review">
         <h3>{{book?.comments?.length}} comment(s)</h3>
-        <!-- TODO_MORE On the dl element, iterate on each comments of the book -->
-        <dl class="h-review hreview">
+        <dl class="h-review hreview" *ngFor="let comment of book?.comments">
             <dt>
                 <data class="p-rating">
-                    <!-- TODO_MORE display the rating stars for this comment 
                     <img 
+                        [src]="'/styles/ktheme/img/' + bookService.convertFromRating(comment.rate) + '-stars.svg'" 
                         alt="{{bookService.convertFromRating(comment.rate)}} stars" 
                     />
-                    -->
                 </data>
-                <!-- TODO_MORE display the user of the comment 
-                <strong class="p-reviewer h-card"></strong>
-                -->
+                <strong class="p-reviewer h-card">{{comment.user}}</strong>
             </dt>
-            <!-- TODO_MORE display the comment itself
             <dd class="e-description">
+                {{comment.comment}}
             </dd>
-            -->
         </dl>
     </div>
     
