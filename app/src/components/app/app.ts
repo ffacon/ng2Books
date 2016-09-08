@@ -15,6 +15,7 @@ import {Profile} from '../profile/profile';
 import {Books} from '../books/books';
 import {BookDetails} from '../bookDetails/bookDetails';
 import {Home} from '../home/home';
+import {Contact} from '../contact/contact';
 
 import {UserService} from '../../services/userService';
 import {BooksService} from '../../services/booksService';
@@ -34,6 +35,7 @@ import {LocalStorageService} from '../../services/localStorageService';
 		{ component: Profile, name: 'Profile', path: '/profile' },
 		{ component: Books, name: 'Books', path: '/books' },
 		{ component: BookDetails, name: 'BookDetails', path: '/book/:id' },
+		{ component: Contact, name: 'Contact', path: '/contact' },
 		{ component: Home, name: 'Home', path: '/home', useAsDefault: true }
 ])
 export class App{

@@ -1,0 +1,42 @@
+<div class="k-info-block">
+
+    <div class="hgroup">
+        <h3>Contact Us</h3>
+    </div>
+    <div class="content">
+    	<p>
+    		You have several possibilities to contact us:
+    	</p>
+    	<ul>
+    		<li>
+    			By Mail:
+    			<a [href]="'mailto:' + email">{{email}}</a>
+    		</li>
+    		<li>
+    			By phone: {{phone}}    			
+    		</li>
+    		<li>
+    			By postal mail: {{address}}
+    		</li>
+    		<li>
+    			Send us a message:
+    			<ul class="messageform">
+	    				<li>
+			    			<textarea 
+			    				(input)="updateMessage($event)"
+			    				placeholder="let us a message here..." 
+			    			></textarea>
+	    				</li>
+	    				<li>
+	    					<input 
+	    						type="submit" 
+	    						value="send"
+	    						(click)="sendMessage()"
+	    					>
+	    				</li>
+    			</ul>
+
+    		</li>
+    	</ul>
+    </div>
+</div>
