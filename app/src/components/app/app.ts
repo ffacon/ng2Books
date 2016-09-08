@@ -20,6 +20,7 @@ import {Contact} from '../contact/contact';
 import {UserService} from '../../services/userService';
 import {BooksService} from '../../services/booksService';
 import {LocalStorageService} from '../../services/localStorageService';
+import {ContactService} from '../../services/contactService';
  
 
 @Component({
@@ -57,7 +58,8 @@ const ALL_ROUTER_BINDINGS: Array<any> = [
 
 const ALL_BINDINGS: Array<any> = [
 	ALL_ROUTER_BINDINGS,
-	HTTP_PROVIDERS
+	HTTP_PROVIDERS,
+	ContactService
 ];
 
 bootstrap(App, [ALL_BINDINGS]);
