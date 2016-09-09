@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>Ng App Unit Tests</title>
+  <link rel="stylesheet" href="/jasmine-core/lib/jasmine-core/jasmine.css">
+  <script src="/systemjs/dist/system.js"></script>
+  <script src="/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+  <script src="/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+  <script src="/jasmine-core/lib/jasmine-core/boot.js"></script>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		System.config({
+			defaultJSExtensions: true
+		});
+
+		System.import('test')
+		.then(window.onload);      
+
+	</script>
+
+</body>
+
+</html>
