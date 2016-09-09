@@ -21,19 +21,23 @@
     		<li>
     			Send us a message:
     			<ul class="messageform">
+    				<form>
 	    				<li>
 			    			<textarea 
-			    				(input)="updateMessage($event)"
+			    				[(ngModel)]="message"
+			    				[ngFormControl]="controlGroup.controls?.message"
 			    				placeholder="let us a message here..." 
 			    			></textarea>
 	    				</li>
 	    				<li>
 	    					<input 
+	    						[disabled]="!controlGroup.valid" 
 	    						type="submit" 
 	    						value="send"
 	    						(click)="sendMessage()"
 	    					>
 	    				</li>
+    				</form>
     			</ul>
 
     		</li>
