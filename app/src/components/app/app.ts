@@ -19,6 +19,7 @@ import {Contact} from '../contact/contact';
 
 import {UserService} from '../../services/userService';
 import {BooksService} from '../../services/booksService';
+import {DataContainerService} from '../../services/dataContainerService';
 import {LocalStorageService} from '../../services/localStorageService';
 import {ContactService} from '../../services/contactService';
  
@@ -28,7 +29,7 @@ import {ContactService} from '../../services/contactService';
 	styleUrls:['src/components/app/app.css'],
 	templateUrl: 'src/components/app/app.html',
 	directives: [ROUTER_DIRECTIVES],
-	providers: [UserService, BooksService, LocalStorageService]
+	providers: [UserService, BooksService, DataContainerService, LocalStorageService]
 })
 @RouteConfig([
 		{ component: Basket, name: 'Basket', path: '/basket' },
