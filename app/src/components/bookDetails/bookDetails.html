@@ -38,6 +38,9 @@
                 <div class="availability">
                     <p><strong>Availability :</strong> immediate delivery</p>
                 </div>
+                <p class="buy" *ngIf="userService.isLogged" >
+                    <button (click)="addToBasket()" type="button">Add to basket</button>
+                </p>
             </div>
         </div>
     </article>

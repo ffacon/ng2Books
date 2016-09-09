@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
+import {Router, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
+
 import {Http, Response} from '@angular/http';
 
 import {Book} from '../../beans/book';
@@ -17,7 +19,7 @@ import {OrderByPipe} from '../../pipes/orderByPipe';
 @Component({
 	selector: 'books',
 	templateUrl: 'src/components/books/books.html',
-	directives: [KPagination],
+	directives: [ROUTER_DIRECTIVES, KPagination],
 	pipes: [FilterFieldPipe, UpdateDataPipe, OrderByPipe]
 })
 export class Books implements OnInit{
@@ -31,6 +33,7 @@ export class Books implements OnInit{
 	reverseOrderFilter: boolean = false;
 
 	constructor(
+		private router: Router,
 		private booksService: BooksService, 
 		public userService: UserService,
 		public dataContainer: DataContainerService ) {}
@@ -47,6 +50,11 @@ export class Books implements OnInit{
 	}
 
 	getRatingClass = this.booksService.getRatingClass;
+
+	addToBasket= (book: Book) : void => {
+		this.userService.basket.addProduct(book);
+		this.router.navigate(['Basket']);
+	}
 
 
 }

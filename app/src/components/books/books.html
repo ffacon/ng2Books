@@ -30,7 +30,7 @@
         <article *ngFor="let book of books | filterField:'name':bookNameFilter | updateData | orderBy:bookOrderBy:reverseOrderFilter | slice:(currentPage-1)*booksPerPageFilter:currentPage*booksPerPageFilter" class="k-product hproduct">
             <div class="photo-data">
                 <p>
-                    <a href="#">
+                    <a [routerLink]="['BookDetails', {id:book.id}]">
                         <img class="photo" [src]="'/data/imgs/books/' + book.id + '.jpg'" />
                     </a>
                 </p>
@@ -39,7 +39,7 @@
             <p class="new" *ngIf="book.isNew">new</p>
 
             <h3 class="fn name">
-                <a href="#" title="See Product sheet">
+                <a [routerLink]="['BookDetails', {id:book.id}]" title="See Product sheet">
                     {{book.name}}
                 </a>
             </h3>
@@ -47,7 +47,7 @@
             <p class="rating {{getRatingClass(book)}}">
 
                 <span [hidden]="!book.comments">
-                    <a href="#">{{book.comments?.length}} comment(s)</a>
+                    <a [routerLink]="['BookDetails', {id:book.id}]">{{book.comments?.length}} comment(s)</a>
                 </span>
                 <span [hidden]="book.comments">
                     No comment
@@ -59,7 +59,10 @@
                     <strong class="price new">{{book.price | currency:'EUR':true}}</strong>
                 </p>
             </div>
-            <div class="buyZone">
+            <div *ngIf="userService.isLogged" class="buyZone">
+                <p class="buy">
+                    <a (click)="addToBasket(book)">Add to basket</a>
+                </p>
             </div>
         </article>        
 

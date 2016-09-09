@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import {RouteParams} from '@angular/router-deprecated';
+import {Router, RouteParams} from '@angular/router-deprecated';
 
 import {UserService} from '../../services/userService';
 import {BooksService} from '../../services/booksService';
@@ -18,6 +18,7 @@ export class BookDetails implements OnInit{
 
 	constructor(
 		private routeParams: RouteParams,
+		private router: Router,
 		public bookService: BooksService,
 		public userService: UserService){}
 
@@ -51,6 +52,12 @@ export class BookDetails implements OnInit{
 		}
 
 		return '/styles/ktheme/img/' + this.bookService.convertFromRating(this.bookService.getRatingAverage(this.book)) + '-stars.svg'
+	}
+
+
+	addToBasket= (): void => {
+		this.userService.basket.addProduct(this.book);
+		this.router.navigate(['Basket']);
 	}
 
 
